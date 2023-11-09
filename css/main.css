@@ -1,16 +1,16 @@
+@@@ nozanin, [09/11/2023 07:59]
 @import url(./fonts.css);
 
-/* CUSTOM PROPS */
+/* Custom props */
 :root {
+    --darkblue: #040D1F;
     --montserrat: "Montserrat";
     --comfortaa: "Comfortaa";
     --roboto: "Roboto";
-    --darkblue: #040D1F;
-    --orange: #ED8E00;
-    --orange-link: #ED8E00;
-    --white: #FFF;
+    --orange: #f18128;
+    --orange-link: #ed8e00;
+    --white: #fff;
 }
-
 
 *,
 *::before,
@@ -43,6 +43,7 @@ ul {
     margin-right: auto;
 }
 
+/* Similar */
 .all-btn {
     display: inline-block;
     max-width: 166px;
@@ -58,9 +59,8 @@ ul {
     padding-top: 17px;
     padding-bottom: 17px;
     color: #000;
-    transition: .5s;
+    transition: 0.5s;
 }
-
 
 .all-btn:hover {
     background-color: var(--darkblue);
@@ -74,31 +74,27 @@ ul {
 .title {
     width: max-content;
     color: var(--orange);
-    font-family: var(--comfortaa);
     font-size: 36px;
+    font-family: var(--comfortaa);
+    font-weight: 400;
     text-transform: capitalize;
+    word-wrap: break-word;
     border-bottom: 2px solid var(--orange);
-
-
-
+    margin-bottom: 50px;
 }
 
-
-/* SITE ADS */
+/* Site Ads  */
 .site-ads {
     display: block;
     width: 100%;
     height: 80px;
-    background: linear-gradient(90deg, #0031AF 0%, #BF7204 97.52%, #C27500 100%, #C27500 100%);
+    background: linear-gradient(90deg, #0031AF 0%, #BF7204 98%, #C27500 100%, #C27500 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 24px;
     color: var(--white);
-
 }
-
-
 
 .site-ads__desc {
     max-width: 166px;
@@ -108,11 +104,12 @@ ul {
     font-weight: 400;
 }
 
+/* Site Ads  */
 
+/* Site nav */
 .site-nav {
     background-color: #000;
     width: 100%;
-
 }
 
 .nav-container {
@@ -130,7 +127,6 @@ ul {
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
-
 }
 
 .logo-img {
@@ -143,8 +139,6 @@ ul {
     display: flex;
     column-gap: 24px;
 }
-
-
 
 .sitenav-link {
     display: block;
@@ -169,27 +163,22 @@ ul {
     transition: .5s;
 }
 
-
 .sitenav-link:hover::after {
     width: 100%;
 }
 
 .sitenav-link:hover {
     color: var(--orange-link);
-
 }
 
+/* Site nav */
 
-
-/* site  hero */
-
-
+/* site-hero */
 .site-hero {
     width: 100%;
     height: 640px;
     position: relative;
 }
-
 
 .site-hero__img {
     position: absolute;
@@ -201,16 +190,12 @@ ul {
     z-index: -1;
 }
 
-
-
 .site-hero__content {
     width: 100%;
     height: 100%;
     background: rgba(7, 15, 25, 0.75);
     /* padding-top: 180px; */
 }
-
-
 
 .site-hero__title {
     max-width: 600px;
@@ -220,35 +205,34 @@ ul {
     font-weight: 700;
 }
 
-
-
 .site-hero__desc {
     max-width: 570px;
     width: 100%;
     margin-top: 30px;
     margin-bottom: 50px;
     text-align: justify;
-    color: #c8c8c8;
+    color: #C8C8C8;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
 }
 
+.site-hero__button {
+    display: flex;
+    column-gap: 30px;
+}
 
+/* site-hero */
 
-.site-main {}
-
-
+/* site-main */
 .films {
     padding: 60px 0 77px;
 }
-
 
 .films-cards {
     display: flex;
     column-gap: 30px;
 }
-
 
 .films-card {
     max-width: 255px;
@@ -257,9 +241,9 @@ ul {
     border-radius: 6px;
     overflow: hidden;
     position: relative;
-
 }
 
+@@@ nozanin, [09/11/2023 07:59]
 .films-card__img {
     position: absolute;
     width: 100%;
@@ -272,53 +256,55 @@ ul {
     width: 100%;
     height: 100%;
     border-radius: 6px;
-    background: linear-gradient(180deg, rgba(241, 129, 40, 0.35) 0%, rgba(0, 0, 0, 0.71) 51.04%, rgba(7, 15, 25, 0.80) 100%);
+    background: linear-gradient(180deg, rgba(241, 129, 40, 0.35) 0%, rgba(0, 0, 0, 0.71) 51%, rgba(7, 15, 25, 0.80) 100%);
+    border-radius: 6px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.films-card__content:hover.films-card__link{
+.films-card__content:hover {
+    cursor: pointer;
+}
+
+.films-card__content:hover .films-card__link {
     transform: scale(1.4);
-
-}
-.films-card__content:hover.films-card__time{
-    transform: scale(8.4);
 }
 
-
+.films-card__content:hover .films-card__time {
+    transform: scale(0);
+}
 
 .films-card__link {
     color: var(--white);
     text-align: center;
+    transition: .5s;
 }
-
 
 .films-card__time {
     max-width: 100px;
     width: 100%;
-    border: 1px solid var(--white);
-    background: rgba(7, 15, 25, 0, 20);
+    border: 1px white solid;
+    border-radius: 9px;
+    background: rgba(7, 15, 25, 0.20);
     padding-top: 7px;
     padding-bottom: 7px;
     text-align: center;
     font-size: 14px;
     font-weight: 400;
     line-height: 10px;
-    margin-top: 12px;
+    color: var(--white);
     margin-bottom: 30px;
-    border-radius: 6px;
-    color: var(--white  );
+    margin-top: 12px;
 }
 
 .films-card__title {
     color: var(--white);
     font-size: 22px;
     font-weight: 400;
-
+    margin-bottom: 12px;
 }
-
 
 .films-card__desc {
     max-width: 226px;
@@ -331,17 +317,16 @@ ul {
     text-align: left;
 }
 
+/* site-main */
 
-
-
-.primer{
+/* primier */
+.primier {
     position: relative;
     width: 100%;
+    height: 500px;
 }
 
-
-
-.primer-video{
+.primier-video {
     position: absolute;
     right: 0;
     top: 0;
@@ -349,23 +334,17 @@ ul {
     object-fit: cover;
 }
 
-.primer-content{
- width: 100%;
- height: 100%;
- background:url(<path-to-image>), lightgray -18px 0px / 107.371% 100% no-repeat;;
-
-
+.primier-content {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #DEF7FF 0%, #F4FCFF 45%, rgba(255, 255, 255, 0) 100%);
 }
 
-.primer-image{
+.primier-image {
     margin-top: 42px;
-
 }
 
-
-
-
-.primer-text{
+.primier-text {
     margin-top: 50px;
     padding-bottom: 55px;
     max-width: 558px;
@@ -376,16 +355,20 @@ ul {
     font-weight: 400;
     line-height: 27px;
 }
-/* PRIMER */
-/* PRIMER */
+
+/* primier */
+
+/* collections */
 .collections {
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
 .collections-cards {
     display: flex;
     justify-content: space-between;
 }
+
 .collections-card {
     max-width: 350px;
     width: 100%;
@@ -394,6 +377,7 @@ ul {
     border-radius: 6px;
     overflow: hidden;
 }
+
 .collection-image {
     object-fit: cover;
     width: 100%;
@@ -403,6 +387,7 @@ ul {
     left: 0;
     z-index: -1;
 }
+
 .collections-content {
     width: 100%;
     height: 100%;
@@ -413,9 +398,45 @@ ul {
     justify-content: center;
     row-gap: 15px;
 }
+
 .collections-link {
     color: var(--white);
 }
+
+.collections-content::after {
+    content: url(../img/Выбрать.png);
+    display: inline-block;
+    position: absolute;
+    left: 7px;
+    top: 6px;
+    transition: .5s;
+}
+
+.collections-content::before {
+    content: url(../img/Выбрать.png);
+    display: inline-block;
+    position: absolute;
+    right: 7px;
+    top: 6px;
+    transition: .5s;
+}
+
+.collections-content:hover .collections-link {
+    transform: scale(1.4);
+}
+
+.collections-content:hover .collections-name {
+    transform: scale(0);
+}
+
+.collections-content:hover::before {
+    transform: translateY(110%);
+}
+
+.collections-content:hover::after {
+    transform: translateY(-110%);
+}
+
 .collections-name {
     color: var(--white);
     font-family: var(--comfortaa);
@@ -423,12 +444,64 @@ ul {
     font-weight: 700;
 }
 
+/* collections */
+
+/* Series */
+.series {
+    padding-bottom: 30px;
+}
+
+.series-lg {
+    position: relative;
+    height: 436px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.series-lg__image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 436px;
+    object-fit: cover;
+    z-index: -1;
+}
+/* site  footer */
+
+.footer{
+    width: 100%;
+    background: linear-gradient(90deg, #FF8C30 0%, #9F4700 100%);
+    box-shadow: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.80));;
+    padding-top: 26px;
+    padding-bottom: 26px;
+}
 
 
- 
+.footer-app{
+    display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+.footer-info{
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+
+}
 
 
+.google-play__image
+.google-play__image{
+    object-fit: cover;
+}
 
-
-
-
+.footer-desc{
+    color: var(--white);
+    font-family: var(--comfortaa);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.18px;
+}
